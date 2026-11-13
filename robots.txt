@@ -1,0 +1,6 @@
+# G.K. Photostat
+# Replace https://mandal-88.github.io/gkphotostat with the production domain before going live.
+User-agent: *
+Allow: /
+
+Sitemap: https://mandal-88.github.io/gkphotostat/sitemap.xml

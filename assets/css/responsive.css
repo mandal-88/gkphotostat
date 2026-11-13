@@ -1,0 +1,99 @@
+/* ==========================================================================
+   G.K. Photostat — Responsive Styles
+   Desktop ≥1440 · Laptop 1024–1366 · Tablet 768–1023 · Mobile 320–767
+   ========================================================================== */
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  .container { max-width: 1280px; }
+  .hero { padding: 104px 0 128px; }
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+  .lightbox-prev { left: 12px; }
+  .lightbox-next { right: 12px; }
+}
+
+@media (max-width: 1199.98px) {
+  .main-nav .nav-link { padding: .5rem .7rem !important; font-size: .92rem; }
+  .main-nav .nav-link::after { left: .7rem; right: .7rem; }
+  .float-chip.chip-2 { right: -10px; }
+}
+
+/* Tablet and below (Bootstrap lg breakpoint — navbar collapses here) */
+@media (max-width: 991.98px) {
+  :root { --gk-header-h: 112px; }
+  .section { padding: 76px 0; }
+  .hero { padding: 64px 0 88px; }
+  .hero-visual { padding: 0; margin-top: 3.5rem; }
+  .hero-content { text-align: center; }
+  .hero-text { margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-content .eyebrow { justify-content: center; }
+  .float-chip.chip-1 { left: 12px; }
+  .float-chip.chip-2 { right: 12px; }
+  .steps::before { display: none; }
+  .step { margin-bottom: 2.5rem; }
+  .cta-banner { padding: 3rem 2.5rem; text-align: center; }
+  .cta-actions { justify-content: center; margin-top: 1.75rem; }
+  .info-panel-body, .form-panel { padding: 2.25rem; }
+  .map-frame { min-height: 340px; }
+  .service-detail { padding: 64px 0; }
+  .location-strip { padding: 2rem; }
+  .service-detail .media-frame { margin-bottom: 2rem; }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  :root { --gk-header-h: 74px; }
+  body { font-size: .97rem; padding-bottom: 64px; }
+  .topbar { display: none; }
+  .section { padding: 60px 0; }
+  .section-sm { padding: 48px 0; }
+  .section-head { margin-bottom: 2.25rem; }
+  .brand-mark { width: 40px; height: 40px; font-size: .95rem; }
+  .brand-name { font-size: 1.05rem; }
+  .brand-tag { font-size: .6rem; letter-spacing: .12em; }
+  .hero { padding: 48px 0 64px; }
+  .hero-text { font-size: 1rem; }
+  .hero-actions .btn { flex: 1 1 100%; }
+  .hero-visual::before { display: none; }
+  .float-chip { padding: .5rem .75rem; font-size: .78rem; gap: .5rem; }
+  .float-chip .bi { width: 28px; height: 28px; font-size: .85rem; }
+  .float-chip.chip-1 { top: -14px; left: 8px; }
+  .float-chip.chip-2 { top: auto; bottom: 30%; right: 8px; }
+  .float-chip.chip-3 { bottom: -16px; left: 8px; }
+  .media-frame::after { display: none; }
+  .page-hero { padding: 32px 0 28px; }
+  .page-hero .lead { font-size: .95rem; }
+  .service-card { padding: 1.75rem 1.5rem; }
+  .cta-banner { padding: 2.5rem 1.5rem; border-radius: 12px; }
+  .cta-actions .btn { flex: 1 1 100%; }
+  .info-panel-body, .form-panel { padding: 1.75rem 1.25rem; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .location-strip { padding: 1.75rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  .location-strip .btn, .location-strip > .d-flex { width: 100%; }
+  .footer-main { padding: 56px 0 24px; }
+  .footer-bottom { text-align: center; }
+  .back-to-top { bottom: 80px; right: 16px; width: 44px; height: 44px; }
+
+  /* Sticky call bar for one-tap calling on phones */
+  .mobile-callbar {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1035;
+    background: var(--gk-navy); box-shadow: 0 -6px 20px rgba(20,43,74,.18);
+  }
+  .mobile-callbar a {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: .5rem; padding: .95rem .5rem;
+    color: var(--gk-white); font-family: var(--font-heading); font-weight: 500; font-size: .92rem;
+  }
+  .mobile-callbar a + a { border-left: 1px solid rgba(255,255,255,.12); }
+  .mobile-callbar a.callbar-primary { background: var(--gk-orange); color: var(--gk-white); }
+  .mobile-callbar a.callbar-primary:hover, .mobile-callbar a.callbar-primary:focus { color: #000; }
+}
+
+@media (max-width: 399.98px) {
+  .brand-tag { display: none; }
+  .float-chip.chip-2 { display: none; }
+  .gallery-filters .btn { font-size: .82rem; padding: .45rem .8rem; }
+}
